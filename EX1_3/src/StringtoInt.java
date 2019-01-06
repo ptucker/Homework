@@ -14,8 +14,9 @@ public static void main(String[] args) {
 	
 	for (int i = 0; i < string.length(); i++)
 	{
+		//PT -- This is more readable: if (string.charAt(i)>='0' && string.charAt(i) <='9') 
 		if (string.charAt(i)>=48 && string.charAt(i) <=57) 
-			convert = convert + string.charAt(i) - 48;
+			convert = convert + string.charAt(i) - 48; //PT -- Again, string.charAt(i) - '0';
 		else	{
 			check = false;
 			break;
