@@ -56,5 +56,6 @@ public String getSupervisor() {
 	return Supervisor;
 }
 
-
+//PT -- consider overriding toString()
+	
 }
