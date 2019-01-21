@@ -26,6 +26,7 @@ public abstract class Building {
         name =n;
         address=a;
     }
+    //PT -- Javadoc, since these are public. -1
     public void setName(String n){name =n;}
     public void setAddress(String a){address = a;}
     public void addPeople(Person p){curOccupants.add(p);}
@@ -35,6 +36,7 @@ public abstract class Building {
      * abstract functions outputKidsandTeachers and outputPolice
      * are declared to be later implemented in the CityHall and School classes
      */
+    //PT -- these should just be on CityHall and School. Not all buildings should implement these. -1
     public abstract void outputKidsandTeachers();
     public abstract void outputPolice();
 }
