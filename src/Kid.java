@@ -11,7 +11,8 @@ public class Kid extends Person {
 	 * no arg constructor uses random number generation to assign enum variable favCandy
 	 */
 	public Kid() {
-
+//PT -- call the base constructor so that PersonID gets set. -1
+		// super();
 		Random rnd = new Random();
 		int num = rnd.nextInt(4);
 		if (num == 0)
