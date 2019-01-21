@@ -4,7 +4,7 @@ import java.util.Random;
  */
 public class Police extends Person implements Employee {
 
- private Roll _roll;
+ private Roll _roll;//PT -- Role, not Roll
  public enum Roll {Patrol, Sargent, Captain, Chief};
 
     /**
