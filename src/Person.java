@@ -9,6 +9,7 @@ public class Person {
 private String name;
 private int age, pnumber, ID;
 private double cash;
+	//PT -- Person shouldn't have EmployeeID since not all Person objects are employees. -1
 private static int EmployeeID = 0;
 private static int PersonID = 0;
 private static int plastnumber = 1111111;
@@ -22,6 +23,7 @@ private static int plastnumber = 1111111;
 	public Person() {
 	name= "Person" + PersonID;
 	PersonID++;
+		//PT -- I'd rather this code in your employees. It might be better to make Employee abstract, so you can have this code there
 	if (this instanceof Employee)
 	{
 		ID = EmployeeID;
@@ -46,10 +48,10 @@ private static int plastnumber = 1111111;
 public String getName() { return name; }
 public double getCash(){return cash;}
 public int getID(){return ID;}
-public int getAge() {return age;}
+public int getAge() {return age;} //PT -- validate age, pnumber. -2
 public int getPnumber() {return pnumber;}
 public void setCash(double c){cash=c;}
-public void setID(int i){ID=i;}
+public void setID(int i){ID=i;} //PT -- I think you don't want to allow this. Once you have an ID, you can't change it. That helps you ensure uniqie IDs
 public void setName(String n) {name=n;}
 public void setAge(int a) {age=a;}
 public void setPnumber(int p) {pnumber=p;}
@@ -57,6 +59,7 @@ public void setPnumber(int p) {pnumber=p;}
 	/**
 	 * displayInfo function outputs all of a Person object's variables.
 	 */
+	//PT -- toString()?
 	public void displayInfo()
 	{
 		if (this instanceof Employee)
